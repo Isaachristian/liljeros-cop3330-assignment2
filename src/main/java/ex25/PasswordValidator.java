@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Isaac Liljeros
+ */
+
 package ex25;
 
 import static java.lang.System.exit;
