@@ -5,7 +5,6 @@
 
 package ex24;
 
-import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -13,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AnagramCheckerTest {
 
     @Test
-    @Tag("Test Valid Anigram 1")
     public void testIsAnagram1() {
         String word1 = "tone";
         String word2 = "note";
@@ -27,7 +25,6 @@ public class AnagramCheckerTest {
     }
 
     @Test
-    @Tag("Test Valid Anigram 2")
     public void testIsAnagram2() {
         String word1 = "ate";
         String word2 = "tea";
@@ -41,7 +38,6 @@ public class AnagramCheckerTest {
     }
 
     @Test
-    @Tag("Test Valid Anigram 1")
     public void testIsNotAnagram1() {
         String word1 = "tone";
         String word2 = "goose";
@@ -55,7 +51,6 @@ public class AnagramCheckerTest {
     }
 
     @Test
-    @Tag("Test Valid Anigram 2")
     public void testIsNotAnagram2() {
         String word1 = "Arnold";
         String word2 = "shorty";
