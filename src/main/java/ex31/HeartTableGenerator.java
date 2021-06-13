@@ -1,16 +1,21 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Isaac Liljeros
+ */
+
 package ex31;
 
-public class heartTableGenerator {
+public class HeartTableGenerator {
 
     public static String generateTable(int age, int restingPulse) {
         StringBuilder table = new StringBuilder();
 
-        table.append(String.format("%-12s | %-7s%n", "Intensity","Rate"));
+        table.append(String.format("%-12s | %-7s\n", "Intensity", "Rate"));
         table.append("-------------|--------\n");
 
         for (int percentage = 55; percentage <= 95; percentage += 5) {
             String percStr = percentage + "%";
-            table.append(String.format("%-12s | %-7s%n", percStr, calculateBPM(age, restingPulse, (percentage / 100.0)) + " bpm"));
+            table.append(String.format("%-12s | %-7s\n", percStr, calculateBPM(age, restingPulse, (percentage / 100.0)) + " bpm"));
         }
 
         return table.toString();

@@ -1,3 +1,8 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 2 Solution
+ *  Copyright 2021 Isaac Liljeros
+ */
+
 package ex31;
 
 // -----------------------------------
@@ -19,18 +24,10 @@ public class App {
             setPulseAge(scanner);
         }
 
-        System.out.println(heartTableGenerator.generateTable(Integer.parseInt(age), Integer.parseInt(restingPulse)));
+        System.out.println(HeartTableGenerator.generateTable(Integer.parseInt(age), Integer.parseInt(restingPulse)));
     }
 
-    private static void setPulseAge(Scanner scanner) {
-        System.out.print("Enter your resting pulse: ");
-        restingPulse = scanner.nextLine();
-
-        System.out.print("Enter your age: ");
-        age = scanner.nextLine();
-    }
-
-    private static boolean validateInputs() {
+    public static boolean validateInputs() {
         if (restingPulse.length() > 0 && age.length() > 0) {
             for (char c : restingPulse.toCharArray()) {
                 if (!Character.isDigit(c)) {
@@ -47,5 +44,18 @@ public class App {
         }
 
         return false;
+    }
+
+    private static void setPulseAge(Scanner scanner) {
+        System.out.print("Enter your resting pulse: ");
+        restingPulse = scanner.nextLine();
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextLine();
+    }
+
+    public static void setPulseAgeInternal(String pulse, String ageInput) {
+        restingPulse = pulse;
+        age = ageInput;
     }
 }
